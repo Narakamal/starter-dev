@@ -1,8 +1,7 @@
 'use client'
 
-// Redux Imports
-import { useSelector } from 'react-redux'
-
+// React Imports
+import { useState } from 'react'
 
 // MUI Imports
 import Card from '@mui/material/Card'
@@ -17,11 +16,17 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 
-import type { RootState } from '@/store'
+// Dummy Data
+const dummyItems = [
+  { id: 'BRG-001', name: 'Paracetamol 500mg', category: 'Obat', stock: 100, unit: 'Tablet' },
+  { id: 'BRG-002', name: 'Amoxicillin 250mg', category: 'Antibiotik', stock: 50, unit: 'Kapsul' },
+  { id: 'BRG-003', name: 'Perban Steril 10cm', category: 'Alat Medis', stock: 200, unit: 'Roll' },
+  { id: 'BRG-004', name: 'Alkohol 70% 100ml', category: 'Cairan Medis', stock: 150, unit: 'Botol' }
+]
 
 const MasterBarangView = () => {
-  // Hooks
-  const items = useSelector((state: RootState) => state.masterBarang.items)
+  // State
+  const [items] = useState(dummyItems)
 
   return (
     <Card>
