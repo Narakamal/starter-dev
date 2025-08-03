@@ -8,6 +8,11 @@ const verticalMenuData = (): VerticalMenuDataType[] => [
     icon: 'ri-home-smile-line'
   },
   {
+    label: 'Manajemen Inventaris',
+    href: '/inventory',
+    icon: 'ri-archive-line'
+  },
+  {
     label: 'About',
     href: '/about',
     icon: 'ri-information-line'
